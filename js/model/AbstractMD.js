@@ -20,7 +20,7 @@ class abstractMD {
             });
         }
         catch (e) {
-            console.log(e);
+            console.error(e);
             reject({ 'Error': `${e}` });
         }
     }
