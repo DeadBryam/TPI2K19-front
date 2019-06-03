@@ -1,9 +1,12 @@
 class abstractMD {
     constructor(resource) {
-        this.BASE_URL = 'http://localhost:3000/';
+        this.BASE_URL = 'http://localhost:2608/inventarioLibreria/wr/';
         this.RESOURCE = resource;
         this.HEADERS = {
-            "Content-type": "application/json; charset=UTF-8"
+            'Content-type': 'application/json; charset=UTF-8',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+            'Access-Control-Allow-Headers': '*'
         };
     }
 
@@ -12,9 +15,12 @@ class abstractMD {
             return new Promise((resolve, reject) => {
                 fetch(`${this.BASE_URL}${this.RESOURCE}/${action}`)
                     .then(res => {
-                        if (res.ok)
-                            resolve(res.json());
-                        else
+                        if (res.ok){
+                            resolve({
+                                head: res.headers,
+                                body: res.json()
+                            });
+                    }else
                             reject({ 'Error': 'Json' });
                     });
             });
@@ -35,7 +41,7 @@ class abstractMD {
                 })
                     .then(res => {
                         if (res.ok) {
-                            resolve(res.json());
+                            resolve({ 'Status': `${res.status} ${res.statusText}`});
                         } else {
                             reject({ 'Error': 'Json' });
                         }
@@ -58,7 +64,7 @@ class abstractMD {
                 })
                     .then(res => {
                         if (res.ok) {
-                            resolve(res.json());
+                            resolve({ 'Status': `${res.status} ${res.statusText}`});
                         } else {
                             reject({ 'Error': 'Json' });
                         }

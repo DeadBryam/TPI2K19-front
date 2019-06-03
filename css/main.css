@@ -1,9 +1,45 @@
-.card {
-    background: #fff;
-    border-radius: 2px;
-    display: inline-block;
-    height: 300px;
-    margin: 1rem;
-    position: relative;
-    width: 300px;
-  }
+@import './color.css';
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  display: grid;
+  grid-template-rows: 1fr 10fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "header header" "main main" "footer footer";
+}
+
+main {
+  grid-area: main;
+  background: var(--white);
+}
+
+header {
+  grid-area: header;
+  background: var(--darkblue);
+  display: grid;
+  grid-template-columns: 10fr 2fr;
+}
+
+header img {
+  height: 90%;
+  margin: auto 10px auto auto;
+  float: left;
+}
+
+header>div {
+  height: 100%;
+}
+
+footer {
+  grid-area: footer;
+  background: var(--darkblue);
+  color: var(--white);
+}
+
+footer>p {
+  text-align: center;
+}

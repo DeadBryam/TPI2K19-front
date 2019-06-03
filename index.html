@@ -5,16 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/main.css">
-    <title>TPI</title>
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/init.css">
+    <title>Init</title>
 </head>
 
 <body>
-    <sc-container>
-        <sc-autocomplete id="autocomplete-ciudad" placeholder="Departamento" class="card" ></sc-autocomplete>
-    </sc-container>
-    <!--script type="module" src="./js/model/ProductosMD.js"></script-->
-    <script type="module" src="./js/view/frmProducto.js"></script>
+    <main>
+        <div class="dark"></div>
+        <div class="content">
+            <div id="menu">
+                <div id="selects">
+                    <sc-container>
+                        <p>Seleccione sucursal</p>
+                        <sc-select datavalue="idSucursal" dataoption="ubicacion" id="sucursal-select"></sc-select>
+                    </sc-container>
+                </div>
+                <div id="button">
+                    <button id="btnnext">NEXT</button>
+                </div>
+            </div>
+            <div id="blank"></div>
+        </div>
+    </main>
+    <script type="module" src="js/view/init.js"></script>
+    <script type="module" src="js/control/components/scissors.js"></script>
 </body>
 
 </html>

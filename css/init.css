@@ -1,0 +1,98 @@
+@import './color.css';
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: monospace;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--green);
+}
+
+.dark {
+    width: 100vw;
+    height: 100vh;
+    background: var(--shadow20);
+}
+
+.content {
+    z-index: 10;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-rows: 4fr 2fr 4fr;
+    grid-template-areas: "blank" "menu";
+}
+
+#menu {
+    grid-area: menu;
+    color: var(--white);
+    font-size: 2em;
+    width: 40vw;
+    margin: 0 auto;
+    background: var(--shadow20);
+    padding: 15px;
+    animation: fadeInUp 1s;
+}
+
+#button{
+    padding-top: 10px;
+}
+
+button{
+    height: 40px;
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    color: var(--white);
+    font-size: 0.5em;
+}
+
+button:focus{
+    background: var(--shadow20);
+}
+
+#blank{
+    grid-area: blank;
+}
+
+@media only screen and (max-width: 1300px) {
+    #menu {
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #menu {
+        width: 60vw;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #menu{
+        width: 90vw;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }

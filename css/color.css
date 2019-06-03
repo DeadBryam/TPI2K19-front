@@ -1,0 +1,16 @@
+:root {
+    --white: rgb(255, 255, 255);
+    --teal: rgb(0, 150, 136);
+    --black: rgb(0, 0, 0);
+    --lightblack: rgba(0, 0, 0, 0.87);
+    --grey: rgba(0, 0, 0, 0.38);
+    --darkgrey: rgb(41, 41, 41);
+    --lightgrey: rgb(167, 164, 164);
+    --lightred: rgb(238, 110, 115);
+    --darkblue: rgb(18, 28, 44);
+    --green: rgb(76, 175, 80);
+    --shadow20: rgba(0, 0, 0, 0.20);
+    --shadow40: rgba(0, 0, 0, 0.40);
+    --shadow60: rgba(0, 0, 0, 0.60);
+    --shadow80: rgba(0, 0, 0, 0.80);
+  }
