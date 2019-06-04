@@ -38,7 +38,7 @@ new class init {
                     let data;
 
                     this.session.sucursal = selector[selector.selectedIndex].value;
-                    data = this.caja.getCajas(`${this.session.sucursal}/caja`);
+                    data = this.caja.getCajas(`/${this.session.sucursal}/caja`);
 
                     document.querySelector("p").innerHTML = 'seleccione caja';
                     

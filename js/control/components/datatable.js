@@ -103,11 +103,14 @@ class datatable extends HTMLElement {
             case 'pagesize':
                 this.pagesize = newValue;
                 break;
+            case 'paginated':
+                this.paginated = newValue;
+                break;
         }
     }
 
     static get observedAttributes() {
-        return ['pagesize'];
+        return ['pagesize','paginated'];
     }
 
     dataDatatableEvent() {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,27 +9,45 @@
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
     <title>Facturar</title>
 </head>
+
 <body>
     <header>
         <div>
             <sc-sidenav>
-                <a class="sidebar-item" href="facturacion.html">FACTURAR</a>
-                <a class="sidebar-item" href="#">PRODUCTOS</a>
+                <a class="sidebar-item" href="./facturacion.html">FACTURAR</a>
+                <a class="sidebar-item" href="./bodega.html">PRODUCTOS</a>
             </sc-sidenav>
         </div>
         <img alt="logo" src="./img/logo.png" />
     </header>
     <main>
-        <!--Facturar
-        datatable de productos x cantidad
-        botones
-
-        quiza un modal para agregar productos
-        booton enviar
-
-        y solo faltaria vista sucursal x bodega-->
         <h2>facturar</h2>
-        
+
+        <div id="dt">
+            <sc-container>
+                <sc-datatable id="datatable-facturacion" paginated=false>
+                    <sc-datacolumn datavalue="idArticulo" datalabel="Producto"></sc-datacolumn>
+                    <sc-datacolumn datavalue="cantidad" datalabel="Cantidad"></sc-datacolumn>
+                </sc-datatable>
+            </sc-container>
+        </div>
+
+        <div id="botones-facturacion">
+            <label for="idArticulo">Id Articulo</label>
+            <div id="articulotxt">
+                <sc-container>
+                    <sc-autocomplete id="autocomplete-bodega" placeholder="Articulo" datavalue="idArticulo">
+                    </sc-autocomplete>
+                </sc-container>
+            </div>
+            <label for="Cantidad">Cantidad</label>
+            <input type="number" name="Cantidad" id="cantidadtxt" placeholder="Cantidad">
+            <button id="btnArticulo">agregar</button>
+        </div>
+
+        <div id="facturar">
+            <button id="btnFacturar">facturar</button>
+        </div>
     </main>
     <footer>
         <p>©2019 SIDI Copyright</p>

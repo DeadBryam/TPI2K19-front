@@ -1,5 +1,4 @@
 @import './color.css';
-
 body {
   padding: 0;
   margin: 0;
@@ -42,4 +41,120 @@ footer {
 
 footer>p {
   text-align: center;
+}
+
+h2 {
+  font-family: monospace;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--shadows80);
+  margin: 10px 0 10px 0 ;
+}
+
+input {
+  color: var(--lightblack);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  background: var(--white);
+  border: 0;
+  border-bottom: 1px solid var(--grey);
+  outline: var(--white);
+  height: 30px;
+}
+
+input:focus {
+  border-bottom: 2px solid var(--teal);
+}
+
+#botones-facturacion{
+  width: 100vw;
+  margin-top: 30px;
+}
+
+#botones-facturacion > input[type="text"], #botones-facturacion > input[type="number"],
+div > input[type="text"]{
+  display: block;
+  margin: 0 auto;
+}
+
+#botones-facturacion > label, div > label{
+  display: block;
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+button{
+  height: 40px;
+  background: none;
+  outline: none;
+  border: none;
+  color: var(--black);
+  font-size: 1em;
+  margin: 0 auto;
+  display: block;
+  text-transform: uppercase;
+}
+
+button#btnArticulo{
+  margin-top: 20px;
+  width: 150px;
+}
+
+button#btnFacturar{
+  margin-top: 10px;
+  width: 100vw;
+}
+
+button:focus{
+  background: var(--shadow20);
+}
+
+#dt{
+  height: 30vh;
+  overflow: scroll;
+}
+
+ul{
+  font-family: Roboto;
+  font-size: 1em; 
+  list-style-type: none;
+  padding: 0;
+  text-align: justify;
+}
+
+ul > li{
+  margin: 0 auto;
+  width: 45vw;
+  padding: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+#articulotxt{
+  text-align: center;
+}
+
+@media only screen and (max-width: 1300px) {
+  ul > li{
+    width: 60vw;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  ul > li{
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  ul > li{
+    width: 100vw;
+  }
 }

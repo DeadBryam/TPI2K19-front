@@ -16,7 +16,7 @@ class container extends HTMLElement {
 
         render(div, this._shadow);
 
-        document.addEventListener("data-autocomplete", ev => {
+        document.addEventListener("data-autocomplete", ev => {          
             if (ev.detail.data != null && Array.isArray(ev.detail.data)) {
                 const datalist = html`
                     ${ev.detail.data.map(r => html`<option value=${r[ev.target.getAttribute('datavalue')]}>`)}
@@ -45,9 +45,9 @@ class container extends HTMLElement {
                     </td>`)}
                 </tr>`)}
             </tbody>`;
-
-            const li = document.createElement('li');
-            const tfoot = html`<tfoot>
+            
+            // const li = document.createElement('li');
+            const tfoot = ev.target.paginated == true ? html`<tfoot>
                 <tr>
                     <td colspan=${ev.target.columns.length}>
                         <ul class=pagination>
@@ -57,28 +57,30 @@ class container extends HTMLElement {
                         </ul>
                     </td>
                 </tr>
-            </tfoot>`;
+            </tfoot>`: '';
 
             render(html`
             ${thead}${tbody}${tfoot}
             `, table);
 
-            table.querySelectorAll('li').forEach(e => {
-                e.addEventListener('click', eve => {
-                    ev.target.actualpage = eve.target.text;
-                    e.dispatchEvent(new CustomEvent('change-paginator', {
-                        detail: {
-                            value: eve.target.text
-                        },
-                        bubbles: true,
-                        composed: true
-                    }));
+            if (ev.target.paginated == true) {
+                table.querySelectorAll('li').forEach(e => {
+                    e.addEventListener('click', eve => {
+                        ev.target.actualpage = eve.target.text;
+                        e.dispatchEvent(new CustomEvent('change-paginator', {
+                            detail: {
+                                value: eve.target.text
+                            },
+                            bubbles: true,
+                            composed: true
+                        }));
+                    });
                 });
-            });
 
-            table.querySelector('tfoot')
-                .querySelector('ul').querySelector('#pg1')
-                .setAttribute('class', 'active');
+                table.querySelector('tfoot')
+                    .querySelector('ul').querySelector('#pg1')
+                    .setAttribute('class', 'active');
+            }
 
         });
 

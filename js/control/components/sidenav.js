@@ -18,9 +18,10 @@ class sidenav extends HTMLElement {
             height:100%;
             width: 0;
             background-color: var(--black);
-            position:fixed!important;
-            z-index:1;
-            overflow:auto;
+            position: absolute;
+            top: 0;
+            z-index: 10;
+            overflow: auto;
             transition: 0.5s;
           }
           
@@ -41,9 +42,9 @@ class sidenav extends HTMLElement {
             height: 40px;
             outline: none;
             font-style: normal;
-            font-family: inherit;
+            font-family: monospace;
             font-size: 1.3em;
-            color: var(--darkgrey);
+            color: var(--lightgrey);
           }
 
           ::slotted(a){
@@ -52,10 +53,10 @@ class sidenav extends HTMLElement {
             text-align: center;
             text-decoration: none;
             font-style: normal;
-            font-family: inherit;
+            font-family: monospace;
             line-height: 40px;
             font-size: 1.3em;
-            color: var(--darkgrey);
+            color: var(--lightgrey);
           }
 
           ::slotted(a:hover){

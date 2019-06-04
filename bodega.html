@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <title>Bodega</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <sc-sidenav>
+                <a class="sidebar-item" href="./facturacion.html">FACTURAR</a>
+                <a class="sidebar-item" href="./bodega.html">PRODUCTOS</a>
+            </sc-sidenav>
+        </div>
+        <img alt="logo" src="./img/logo.png" />
+    </header>
+    <main>
+        <h2>Productos</h2>
+        <div>
+            <label for="filtro-bodega">Filtrado</label>
+            <input type="text" name="filtro" id="filtro-bodega" placeholder="ej. BOBC0891">
+        </div>
+
+        <ul id="lista-bodega">
+        </ul>
+    </main>
+    <footer>
+        <p>©2019 SIDI Copyright</p>
+    </footer>
+    <script type="module" src="./js/view/frmBodega.js"></script>
+    <script type="module" src="./js/control/components/scissors.js"></script>
+</body>
+
+</html>

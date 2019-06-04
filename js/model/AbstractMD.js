@@ -13,7 +13,7 @@ class abstractMD {
     getJson(action = "") {
         try {
             return new Promise((resolve, reject) => {
-                fetch(`${this.BASE_URL}${this.RESOURCE}/${action}`)
+                fetch(`${this.BASE_URL}${this.RESOURCE}${action}`)
                     .then(res => {
                         if (res.ok){
                             resolve({
