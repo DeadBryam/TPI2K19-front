@@ -1,0 +1,10 @@
+version: "3"
+services:
+  web:
+    image: matuzalen.daz.zeit:5000/web
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "80:80"
