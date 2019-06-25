@@ -1,2 +1,2 @@
 FROM nginx:alpine
-COPY libreria/.:/usr/share/nginx/html/ 
+COPY libreria/. /usr/share/nginx/html/ 
