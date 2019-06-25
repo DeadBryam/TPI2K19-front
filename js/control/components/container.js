@@ -16,7 +16,9 @@ class container extends HTMLElement {
 
         render(div, this._shadow);
 
-        document.addEventListener("data-autocomplete", ev => {          
+        document.addEventListener("data-autocomplete", ev => {
+          
+                    
             if (ev.detail.data != null && Array.isArray(ev.detail.data)) {
                 const datalist = html`
                     ${ev.detail.data.map(r => html`<option value=${r[ev.target.getAttribute('datavalue')]}>`)}
@@ -103,6 +105,8 @@ class container extends HTMLElement {
         });
 
         document.addEventListener('data-select', ev => {
+            console.log(ev.detail);
+            
             const options = html`
                 ${ev.detail.data.map(m => html`
                     <option value="${m[ev.target.getAttribute("datavalue")]}">

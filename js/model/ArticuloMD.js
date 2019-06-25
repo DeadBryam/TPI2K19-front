@@ -11,14 +11,13 @@ class articuloMD extends abstractMD {
      */
     filter(filter = "$^") {                
         try {
-            return this.getJson(`/f?filter=${filter}`);
+            return this.getJson(`?filter=${filter}`);
         }
         catch (e) {
             return e;
         }
     }
 
-    
 }
 
 export default articuloMD;

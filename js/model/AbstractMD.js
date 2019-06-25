@@ -1,6 +1,6 @@
 class abstractMD {
     constructor(resource) {
-        this.BASE_URL = 'http://localhost:2608/inventarioLibreria/wr/';
+        this.BASE_URL = 'http://matuzalen.daz.zeit:2608/libreria/wr/';
         this.RESOURCE = resource;
         this.HEADERS = {
             'Content-type': 'application/json; charset=UTF-8',

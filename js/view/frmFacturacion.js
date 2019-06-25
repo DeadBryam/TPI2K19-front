@@ -81,6 +81,8 @@ new class frmFacturacion {
 
         document.querySelector("#autocomplete-bodega")
             .addEventListener('set-autocomplete', ev => {
+                
+                
                 if (ev.detail.value.trim().length === 0) {
                     ev.detail.value = "$^";
                 }

@@ -21,7 +21,7 @@ class bodegaMD extends abstractMD {
 
     getAll() {
         try {
-            return this.getJson(`/all`);
+            return this.getJson();
         }
         catch (e) {
             return e;
