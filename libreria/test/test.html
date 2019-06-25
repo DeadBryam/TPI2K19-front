@@ -24,18 +24,14 @@
         import ArticuloMD from '../js/model/ArticuloMD.js';
         import SucursalMD from '../js/model/SucursalMD.js';
         import ProductosMD from '../js/model/ProductosMD.js';
-        import FacturacionMD from '../js/model/FacturacionMD.js';
         import cajaMD from '../js/model/cajaMD.js';
         import BodegaMD from '../js/model/BodegaMD.js';
         let artciuloResources = new ArticuloMD();
         let sucursalResources= new SucursalMD();
         let productosResources= new ProductosMD();
-        let facturacionResources= new FacturacionMD();
         let cajaResources= new cajaMD();
         let bodegaResources =new BodegaMD();
         let resultado;
-
-	sessionStorage.setItem("session", "{sucursal:'APA1508',caja:'1'}");
         
         //GET ARTICULOMD
         describe("Prueba para Articulo", function () {
