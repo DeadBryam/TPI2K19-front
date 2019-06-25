@@ -1,11 +1,11 @@
 :root {
-    --white: rgb(255, 255, 255);
+    --white: rgb(0, 0, 0);
     --teal: rgb(0, 150, 136);
     --black: rgb(0, 0, 0);
     --lightblack: rgba(0, 0, 0, 0.87);
     --grey: rgba(0, 0, 0, 0.38);
     --darkgrey: rgb(41, 41, 41);
-    --lightgrey: rgb(167, 164, 164);
+    --lightgrey: rgb(0, 0, 0);
     --lightred: rgb(238, 110, 115);
     --darkblue: rgb(18, 28, 44);
     --green: rgb(76, 175, 80);
